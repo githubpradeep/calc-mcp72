@@ -1,69 +1,73 @@
 # MCP Calculator Server
 
-    A simple Model Context Protocol (MCP) server that provides calculator functions.
+A simple Model Context Protocol (MCP) server that provides calculator functions.
 
-    ## Overview
+<a href="https://glama.ai/mcp/servers/@githubpradeep/calc-mcp72">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@githubpradeep/calc-mcp72/badge" alt="Calculator Server MCP server" />
+</a>
 
-    This MCP server implements basic arithmetic operations as tools that can be called by Large Language Models (LLMs) through the Model Context Protocol.
+## Overview
 
-    ## Features
+This MCP server implements basic arithmetic operations as tools that can be called by Large Language Models (LLMs) through the Model Context Protocol.
 
-    - Addition: Add two numbers together
-    - Subtraction: Subtract one number from another
-    - Multiplication: Multiply two numbers together
-    - Division: Divide one number by another (with validation to prevent division by zero)
+## Features
 
-    ## Installation
+- Addition: Add two numbers together
+- Subtraction: Subtract one number from another
+- Multiplication: Multiply two numbers together
+- Division: Divide one number by another (with validation to prevent division by zero)
 
-    ```bash
-    npm install
-    ```
+## Installation
 
-    ## Usage
+```bash
+npm install
+```
 
-    ### Running the server
+## Usage
 
-    ```bash
-    npm run dev
-    ```
+### Running the server
 
-    This starts the MCP server in development mode with auto-restart on file changes.
+```bash
+npm run dev
+```
 
-    For production:
+This starts the MCP server in development mode with auto-restart on file changes.
 
-    ```bash
-    npm start
-    ```
+For production:
 
-    ### Testing with MCP Inspector
+```bash
+npm start
+```
 
-    You can test the server using the MCP Inspector:
+### Testing with MCP Inspector
 
-    ```bash
-    npx @modelcontextprotocol/inspector node src/index.js
-    ```
+You can test the server using the MCP Inspector:
 
-    This will open a web interface where you can:
-    - View available tools
-    - Test each calculator function with custom inputs
-    - See the responses from the server
+```bash
+npx @modelcontextprotocol/inspector node src/index.js
+```
 
-    ## Available Tools
+This will open a web interface where you can:
+- View available tools
+- Test each calculator function with custom inputs
+- See the responses from the server
 
-    | Tool | Parameters | Description |
-    |------|------------|-------------|
-    | add | a: number, b: number | Adds two numbers |
-    | subtract | a: number, b: number | Subtracts b from a |
-    | multiply | a: number, b: number | Multiplies two numbers |
-    | divide | a: number, b: number (non-zero) | Divides a by b |
+## Available Tools
 
-    ## Example Usage
+| Tool | Parameters | Description |
+|------|------------|-------------|
+| add | a: number, b: number | Adds two numbers |
+| subtract | a: number, b: number | Subtracts b from a |
+| multiply | a: number, b: number | Multiplies two numbers |
+| divide | a: number, b: number (non-zero) | Divides a by b |
 
-    When connected to an LLM through MCP, the model can call these tools to perform calculations. For example:
+## Example Usage
 
-    - To add 5 and 3, the LLM would call the `add` tool with parameters `a: 5, b: 3`
-    - To divide 10 by 2, the LLM would call the `divide` tool with parameters `a: 10, b: 2`
+When connected to an LLM through MCP, the model can call these tools to perform calculations. For example:
 
-    ## License
+- To add 5 and 3, the LLM would call the `add` tool with parameters `a: 5, b: 3`
+- To divide 10 by 2, the LLM would call the `divide` tool with parameters `a: 10, b: 2`
 
-    MIT
+## License
+
+MIT
